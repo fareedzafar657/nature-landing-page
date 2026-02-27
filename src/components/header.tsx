@@ -1,5 +1,4 @@
-import React from "react";
-import MusicIcon from "../assets/music.svg";
+import AudioVisualizer from "./AudioVisualizer";
 
 const Header = () => {
   return (
@@ -8,7 +7,10 @@ const Header = () => {
       <div>
         <p className="text-white font-gilroy tracking-wide font-bold">About us</p>
       </div>
-      <img src={MusicIcon} className="h-[24px] w-auto stroke-white" />
+      <div>
+      {/* omit `audioSrc` to let the visualizer pick a free track from a public API */}
+      <AudioVisualizer audioSrc="/nature_music.mp3" width={130} height={35} />
+      </div>
     </div>
   );
 };

@@ -18,3 +18,45 @@
     rgba(255, 255, 255, 0) 100%
   );
 }
+
+.visualizer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.bars-container {
+  display: flex;
+  align-items: flex-end; /* Anchors bars to the bottom */
+  height: 200px;         /* Max height of the visualizer */
+  width: 350px;
+  gap: 6px;              /* Space between bars */
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.visualizer-bar {
+  flex: 1;               /* Makes all bars an equal width */
+  background: #ffffff;   /* White bars when playing */
+  border-radius: 0;      /* Sharp edges */
+  min-height: 2px;       /* So they don't disappear entirely when quiet */
+  /* A slight transition makes the bouncing look much smoother */
+  transition: height 0.05s ease;
+}
+
+.visualizer-wrapper.muted {
+  opacity: 0.7;
+}
+
+audio {
+  display: none;
+}

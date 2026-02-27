@@ -1,5 +1,3 @@
-import React from "react";
-
 const HeroContent = () => {
   return (
     <div className="flex flex-col space-y-3 -translate-y-8">
