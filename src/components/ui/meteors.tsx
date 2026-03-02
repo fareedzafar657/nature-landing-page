@@ -27,6 +27,7 @@ export const Meteors = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      className="overflow-hidden w-screen h-screen absolute inset-0"
     >
       {meteors.map((_, idx) => {
         const meteorCount = number || 20;
