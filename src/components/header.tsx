@@ -1,9 +1,10 @@
 import AudioVisualizer from "./AudioVisualizer";
+import { GiPineTree } from "react-icons/gi";
 
 const Header = () => {
   return (
     <div className="flex items-center justify-between">
-      <img src="Logo.png" className="h-[24px] w-auto" />
+      <GiPineTree color="white" size={"40px"} />
       <div>
         <p className="text-white font-gilroy tracking-wide font-bold">About us</p>
       </div>
