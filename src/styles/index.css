@@ -36,19 +36,19 @@
 .bars-container {
   display: flex;
   align-items: flex-end; /* Anchors bars to the bottom */
-  height: 200px;         /* Max height of the visualizer */
+  height: 200px; /* Max height of the visualizer */
   width: 350px;
-  gap: 6px;              /* Space between bars */
+  gap: 6px; /* Space between bars */
   background-color: transparent;
   padding: 0;
   border-radius: 0;
 }
 
 .visualizer-bar {
-  flex: 1;               /* Makes all bars an equal width */
-  background: #ffffff;   /* White bars when playing */
-  border-radius: 0;      /* Sharp edges */
-  min-height: 2px;       /* So they don't disappear entirely when quiet */
+  flex: 1; /* Makes all bars an equal width */
+  background: #ffffff; /* White bars when playing */
+  border-radius: 0; /* Sharp edges */
+  min-height: 2px; /* So they don't disappear entirely when quiet */
   /* A slight transition makes the bouncing look much smoother */
   transition: height 0.05s ease;
 }
@@ -61,10 +61,9 @@ audio {
   display: none;
 }
 
-
 @theme inline {
   --animate-meteor-effect: meteor 5s linear infinite;
-  
+
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -77,5 +76,14 @@ audio {
       transform: rotate(215deg) translateX(-800px);
       opacity: 0;
     }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -30,7 +30,7 @@ const sizeConfig = {
     bodyText: "text-xs",
     iconSize: "w-4 h-4",
     buttonSize: "p-1.5",
-    padding: "p-3",
+    padding: "p-0",
     gap: "gap-2",
   },
   medium: {
@@ -260,13 +260,6 @@ export default function MusicPlayer({
 
   return (
     <>
-      <style jsx>{`
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-      `}</style>
-
       {/* Vertical Layout */}
       {layout === "vertical" && (
         <div className={`flex flex-col items-center justify-center ${config.gap} ${config.padding} rounded-2xl transition-all duration-300 ${bgClass}`}>

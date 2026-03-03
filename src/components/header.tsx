@@ -38,7 +38,7 @@ const sampleTracks = [
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-start justify-between">
       <GiPineTree color="white" size={"40px"} />
       <div>
          <MusicPlayer
