@@ -1,73 +1,141 @@
-# React + TypeScript + Vite
+# 🌲 Nature Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, responsive landing page with nature vibes and ambient music. Built with modern web technologies for an immersive user experience.
 
-Currently, two official plugins are available:
+> 💚 A passion project created in my free time. Enjoy exploring nature through music and design!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?style=flat-square&logo=vite)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.18-06B6D4?style=flat-square&logo=tailwindcss)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎵 **Ambient Music Player** - Immersive nature soundscapes with audio visualization
+- 🎨 **Custom Typography** - Beautiful custom fonts optimized for performance
+- 📱 **Fully Responsive** - Seamless experience across all devices and screen sizes
+- 🌿 **Nature-Inspired Design** - Calming aesthetics and organic visuals
+- ⚡ **Lightning Fast** - Powered by Vite for instant feedback and optimal performance
+- 🎭 **Smooth Animations** - Engaging transitions using Motion library
+- 🎯 **Modern Stack** - React 19, TypeScript, and Tailwind CSS
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Check out the deployed version on Vercel: [View Live](https://github.com/fareedzafar657/nature-landing-page) (link available in GitHub repo)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Quick Start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 16+ and Yarn installed
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/fareedzafar657/nature-landing-page.git
+cd nature-landing-page
+
+# Install dependencies
+yarn install
+
+# Start development server
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+yarn build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+yarn preview
+
 ```
+
+### Deployed on Vercel
+
+This project is deployed on **Vercel** for fast, reliable hosting. For deployment link, check the GitHub repository. run preview
+
+# Run linting
+npm lint
+```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── AudioVisualizer.tsx      # Music visualization component
+│   ├── background-image.tsx     # Animated background
+│   ├── header.tsx               # Navigation header
+│   ├── hero-content.tsx         # Hero section
+│   ├── music-player.tsx         # Audio player controls
+│   └── ui/
+│       └── meteors.tsx          # Decorative meteor animation
+├── lib/
+│   └── utils.ts                 # Utility functions
+├── styles/
+│   ├── fonts.css                # Custom font definitions
+│   └── index.css                # Global styles
+├── App.tsx                       # Main app component
+└── main.tsx                      # React entry point
+
+public/
+├── background/                   # Background assets
+└── fonts/                       # Custom font files
+```
+
+## 🎨 Customization
+
+### Custom Fonts
+
+Custom fonts are located in `public/fonts/` and defined in `src/styles/fonts.css`. Font files are optimized using `ttf2woff2` for best performance.
+
+To add new fonts:
+1. Place font files in `public/fonts/`
+2. Add `@font-face` declarations to `src/styles/fonts.css`
+3. Use in your components via Tailwind or CSS
+
+### Styling
+
+This project uses **Tailwind CSS** for styling. Configuration can be found in `tailwind.config.js`.
+
+###yarn dev` | Start development server with hot reload |
+| `yarn build` | Build optimized production bundle |
+| `yarn preview` | Preview production build locally |
+| `yar
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build optimized production bundle |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint to check code quality |
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 19
+- **Build Tool**: Vite 7
+- **Language**: TypeScript 5.9
+- **Styling**: Tailwind CSS 4 + Sass
+- **Animations**: Motion
+- **Icons**: React Icons, Lucide React
+- **Utilities**: clsx, tailwind-merge
+- **Linting**: ESLint
+
+## 🌐 Browser Support
+
+Works on all modern browsers that support ES2020 and CSS Grid/Flexbox:
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📝 Font Optimization
+
+Custom fonts are converted to WOFF2 format for optimal performance. The font conversion script is available at `scripts/font-convert-script.js`.
+
+---
+
+Made with 🌿 and ☕
